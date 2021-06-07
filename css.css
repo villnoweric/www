@@ -1,0 +1,112 @@
+header, footer{
+	position: relative;
+	background-color:#00309C;
+	height:10%;
+	width:100%;
+}
+body{
+	background-color:#5A7EDC;
+	background: radial-gradient(circle at 5% 15%, rgba(144,176,238,1) 0%, rgba(90,126,220,1) 15%);
+	width:100%;
+	margin:0;
+	padding:0;
+	font-family:sans-serif;
+}
+footer{
+	position: absolute;
+	bottom:0;
+	height:15%;
+}
+
+.schwoop{
+	position: absolute;
+	bottom:0;
+	height:4%;
+	width:100%;
+	background-image: 
+    linear-gradient(
+      to left,
+	  #00309C,
+      #8CA9E7 70%, 
+      #00309C
+    );
+}
+.schwoop2{
+	height:4%;
+	width:100%;
+	background-image: 
+    linear-gradient(
+      to left,
+	  #00309C,
+      #A0858D 70%, 
+      #00309C
+    );
+}
+.power{
+	color: white;
+	font-size:2em;
+	position: absolute;
+	bottom:50%;
+	left:2.5%;
+}
+.footer-text{
+	color:white;
+	font-family:monospace;
+	font-size:1.2em;
+	position:absolute;
+	bottom:50%;
+	right:5%;
+}
+.left{
+	position:absolute;
+	left:0;
+	top:10%;
+	width:47%;
+	height:75%;
+	text-align:right;
+}
+.middleSchwoop{
+	position:absolute;
+	top:10%;
+	left:50%;
+	height:75%;
+	width:3px;
+	background-image:
+linear-gradient(
+      to bottom,
+	  #5A7EDC 10%,
+      #8CA9E7 40%, 
+      #5A7EDC 90%
+    );
+}
+.right{
+	position:absolute;
+	right:0;
+	top:10%;
+	width:45%;
+	height:75%;
+}
+.profile{
+	width:100px;
+	border: 4px solid white;
+	border-radius:8px;
+}
+.primary{
+	color:white;
+	font-size:2em;
+	vertical-align: top;
+	padding-left:10%;
+}
+.secondary{
+	color:blue;
+	font-size:1em;
+	vertical-align: top;
+	padding-left:10%;
+}
+.user{
+	padding-bottom:45px;
+}
+.left-text{
+	color: white;
+	font-size:2em;
+}

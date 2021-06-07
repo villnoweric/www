@@ -1,12 +1,16 @@
 <html>
 	<head>
 		<link rel="stylesheet" href="css.css">
+		<link rel="stylesheet" href="https://unpkg.com/xp.css" />
+		<link rel="stylesheet" href="https://code.jquery.com/ui/1.11.3/themes/smoothness/jquery-ui.css" />
 	</head>
 	<body>
+	<div class="contain">
 		<header>
 		<div class="schwoop">&nbsp;</div>
 		</header>
-		<div class="left">
+		<div id="welcome">welcome</div>
+		<div id="left">
 			<table style="vertical-align: middle; text-align:right; height: 100%; width: 100%;">
 					<tr>
 						<td class="left-text">
@@ -16,27 +20,28 @@
 			</tr>
 			</table>
 		</div>
-		<div class="middleSchwoop"></div>
-		<div class="right">
-			<table style="vertical-align: middle; height: 100%; width: 100%;">
+		<div id="middleSchwoop"></div>
+		<div id="right">
+			<table style="vertical-align: middle; height: 100%; width: 100%;" class="users">
 				<tr>
 					<td>
 					<table class="user">
 						<tr>
-							<td rowspan="2"><img class="profile" src="images/astronaut.jpg"></td>
+							<td rowspan="2" class="profile-cell"><img class="profile" src="images/astronaut.jpg"></td>
 							<td class="primary">Astronaut</td>
 						</tr>
 					</table>
 					<table class="user">
 						<tr>
-							<td rowspan="2"><img class="profile" src="images/duck.jpg"></td>
+							<td rowspan="2" class="profile-cell"><img class="profile" src="images/duck.jpg"></td>
 							<td class="primary">Duck</td>
 						</tr>
 					</table>
-					<table class="user">
+					<table class="user" id="ball">
 						<tr>
-							<td rowspan="2"><img class="profile" src="images/ball.jpg"></td>
+							<td rowspan="2" class="profile-cell"><img class="profile" src="images/ball.jpg"></td>
 							<td class="primary">Ball</td>
+							<!--<button type="button" id="btn1" class="btn btn-info btn-lg">Open Modal</button>-->
 						</tr>
 					</table>
 					</td>
@@ -49,5 +54,60 @@
 		<table class="power"><tr><td width="60px"><img src="https://icons.iconarchive.com/icons/dtafalonso/modern-xp/256/ModernXP-02-System-Power-icon.png" width="80%"></td><td>Turn off computer</td></tr></table>
 		<div class="footer-text">After you log on, you can add or change accounts.<br>Just go to Control Panel and click User Accounts.</div>
 		</footer>
+		</div>
 	</body>
+		
+<!-- Modal -->
+<div class="modal fade window" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" style="width:500px;left:500px;top:400px;">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header title-bar">
+        <div class="title-bar-text modal-title" id="myModalLabel">About Me</div>
+		<div class="title-bar-controls">
+				<button class="modal-resize" aria-label="Minimize"></button>
+			  <button data-dismiss="modal" aria-label="Close"></button>
+			</div>
+	  </div>
+	  <div class="window-body">
+			<p>There's so much room for activities!</p>
+		  </div>
+    </div>
+  </div>
+</div>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	<script>
+	$('#ball').click(function() {
+		$('#right').hide();
+		$('#left').hide();
+		$('#middleSchwoop').hide();
+		$('.power').hide();
+		$('.footer-text').hide();
+		$('#welcome').show();
+		
+		setTimeout(
+		  function() 
+		  {
+			var modalDiv = $('#myModal');
+			  modalDiv.modal({backdrop: false, show: true});
+				
+			  $('.modal').draggable({
+				handle: ".modal-header"
+			  });
+			  $('.modal').resizable({
+					//alsoResize: ".modal-dialog",
+					minHeight: 150,
+					minWidth:250
+				});
+			  $('#right').show();
+		$('#left').show();
+		$('#middleSchwoop').show();
+		$('.power').show();
+		$('.footer-text').show();
+		$('#welcome').hide();
+		  }, 3000);
+		
+	});
+	</script>
 </html>

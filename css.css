@@ -59,7 +59,7 @@ footer{
 	bottom:50%;
 	right:5%;
 }
-.left{
+#left{
 	position:absolute;
 	left:0;
 	top:10%;
@@ -67,7 +67,7 @@ footer{
 	height:75%;
 	text-align:right;
 }
-.middleSchwoop{
+#middleSchwoop{
 	position:absolute;
 	top:10%;
 	left:50%;
@@ -81,7 +81,7 @@ linear-gradient(
       #5A7EDC 90%
     );
 }
-.right{
+#right{
 	position:absolute;
 	right:0;
 	top:10%;
@@ -97,18 +97,62 @@ linear-gradient(
 	color:white;
 	font-size:2em;
 	vertical-align: top;
-	padding-left:10%;
+	padding-left:5%;
 }
 .secondary{
 	color:blue;
 	font-size:1em;
 	vertical-align: top;
-	padding-left:10%;
+	padding-left:5%;
 }
 .user{
-	padding-bottom:45px;
+	margin-bottom:25px;
+	width:80%;
 }
 .left-text{
 	color: white;
 	font-size:2em;
+}
+.modal-open .contain{
+	display:none;
+}
+.modal-open{
+	background: none;
+	position: fixed;
+}
+html{
+	background-image: url('images/bliss.jpg');
+	overflow:hidden;
+}
+.modal{
+	display:none;
+}
+.modal-header{
+	background:blue;
+}
+
+.users table{
+	padding:10px;
+}
+.profile-cell{
+	width:110px;
+}
+.users table:hover{
+	border-radius:10px;
+
+	background:linear-gradient(
+      to left,
+      #5A7EDC, 
+      #00309C
+    );
+}
+#welcome{
+	color:white;
+	font-size:4em;
+	font-weight:bold;
+	font-style:italic;
+	display:none;
+	position:absolute;
+	left:60%;
+	top:40%;
 }
